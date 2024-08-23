@@ -727,7 +727,7 @@ public class ViewPortHandler {
      * @return
      */
     public boolean canZoomOutMoreX() {
-        return mScaleX > mMinScaleX;
+        return mScaleX >= mMinScaleX;
     }
 
     /**
