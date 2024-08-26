@@ -727,7 +727,7 @@ public class ViewPortHandler {
      * @return
      */
     public boolean canZoomOutMoreX() {
-        return mScaleX >= mMinScaleX;
+        return mScaleX > mMinScaleX;
     }
 
     /**
@@ -755,5 +755,14 @@ public class ViewPortHandler {
      */
     public boolean canZoomInMoreY() {
         return mScaleY < mMaxScaleY;
+    }
+
+    /**
+     * Return true if the chart scale is equal to the minimum scale
+     *
+     * @return
+     */
+    public boolean equalZoomMoreX() {
+        return mScaleX == mMinScaleX;
     }
 }

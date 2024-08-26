@@ -403,8 +403,15 @@ public class BarLineChartTouchListener extends ChartTouchListener<BarLineChartBa
                         mMatrix.set(mSavedMatrix);
                         mMatrix.postScale(scaleX, 1f, t.x, t.y);
 
-                        if (l != null)
+                        if (l != null) {
                             l.onChartScale(event, scaleX, 1f);
+                        }
+                    } else {
+                        if (h.equalZoomMoreX()) {
+                            if (l != null) {
+                                l.onChartScale(event, scaleX, 1f);
+                            }
+                        }
                     }
 
                 } else if (mTouchMode == Y_ZOOM && mChart.isScaleYEnabled()) {
