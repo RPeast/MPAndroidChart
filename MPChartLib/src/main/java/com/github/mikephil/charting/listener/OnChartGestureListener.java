@@ -1,5 +1,6 @@
 package com.github.mikephil.charting.listener;
 
+import android.graphics.Matrix;
 import android.view.MotionEvent;
 
 /**
@@ -66,11 +67,6 @@ public interface OnChartGestureListener {
     void onChartScale(MotionEvent me, float scaleX, float scaleY);
 
     /**
-     * Callbacks when controlling the zoom/double click gesture zoom/zoom control.
-     */
-    void onChartScaleControls(Matrix mMatrix, MotionEvent event, float scaleX, float scaleY);
-
-    /**
      * Callbacks when the chart is moved / translated via drag gesture.
      *
      * @param me
@@ -78,4 +74,9 @@ public interface OnChartGestureListener {
      * @param dY translation distance on the y-axis
      */
     void onChartTranslate(MotionEvent me, float dX, float dY);
+
+    /**
+     * Callbacks when controlling the zoom/double click gesture zoom/zoom control.
+     */
+    void onChartScaleControls(Matrix mMatrix, MotionEvent event, float scaleX, float scaleY);
 }
