@@ -85,6 +85,11 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     private boolean mScaleYEnabled = true;
 
     /**
+     * Controls the switch when touching the X-axis to scale
+     */
+    private boolean mControlsTouchXZoomEnabled = false;
+
+    /**
      * paint object for the (by default) lightgrey background of the grid
      */
     protected Paint mGridBackgroundPaint;
@@ -1173,6 +1178,14 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
 
     public boolean isScaleYEnabled() {
         return mScaleYEnabled;
+    }
+
+    public void setControlsTouchXZoomEnabled(boolean enabled) {
+        this.mControlsTouchXZoomEnabled = enabled;
+    }
+
+    public boolean getControlsTouchXZoomEnabled() {
+        return this.mControlsTouchXZoomEnabled;
     }
 
     /**

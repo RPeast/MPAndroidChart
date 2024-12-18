@@ -66,6 +66,11 @@ public interface OnChartGestureListener {
     void onChartScale(MotionEvent me, float scaleX, float scaleY);
 
     /**
+     * Callbacks when controlling the zoom/double click gesture zoom/zoom control.
+     */
+    void onChartScaleControls(Matrix mMatrix, MotionEvent event, float scaleX, float scaleY);
+
+    /**
      * Callbacks when the chart is moved / translated via drag gesture.
      *
      * @param me
